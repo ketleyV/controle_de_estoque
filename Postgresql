@@ -1,0 +1,29 @@
+CREATE TABLE estoque (
+    id SERIAL PRIMARY KEY,
+    produto VARCHAR(100) NOT NULL,
+    quantidade INTEGER NOT NULL,
+    preco DECIMAL(10, 2) NOT NULL,
+    categoria VARCHAR(50)
+);
+
+CREATE TABLE entrada (
+    id serial NOT NULL,
+    produto_id integer,
+    quantidade integer NOT NULL,
+    data timestamp without time zone DEFAULT CURRENT_TIMESTAMP,
+    CONSTRAINT entradas_pkey PRIMARY KEY (id)
+);
+
+CREATE TABLE saida (
+    id serial NOT NULL,
+    produto_id integer,
+    quantidade integer NOT NULL,
+    data timestamp without time zone DEFAULT CURRENT_TIMESTAMP,
+    CONSTRAINT saidas_pkey PRIMARY KEY (id)
+);
+
+CREATE TABLE usuarios (
+    id SERIAL PRIMARY KEY,
+    usuario VARCHAR(50) NOT NULL UNIQUE,
+    senha VARCHAR(100) NOT NULL
+);
