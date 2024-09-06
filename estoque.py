@@ -9,8 +9,8 @@ def conectar_db():
     try:
         conn = psycopg2.connect(
             dbname="estoque",
-            user="postgres",  # Substitua pelo seu usuário
-            password="ketley2010@",  # Substitua pela sua senha
+            user="",  # Substitua pelo seu usuário
+            password="",  # Substitua pela sua senha
             host="localhost",
             port="5432",
             options="-c client_encoding=UTF8"
