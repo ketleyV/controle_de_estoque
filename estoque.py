@@ -1,7 +1,6 @@
 import tkinter as tk
 from tkinter import messagebox, ttk
 import psycopg2
-from PIL import Image, ImageTk
 import pandas as pd
 
 # Função para conectar ao banco de dados PostgreSQL
@@ -277,13 +276,6 @@ tela_login = tk.Tk()
 tela_login.title("Login")
 tela_login.geometry("300x300")
 tela_login.resizable(False, False)
-
-# Carregando a imagem de fundo usando Pillow
-bg_image = Image.open("C:/Users/ketle/OneDrive/Documentos/estoque/img/52723533aa348f70a5bba4676998d7af.jpg")
-bg_image = bg_image.resize((300, 300), Image.LANCZOS)
-bg_photo = ImageTk.PhotoImage(bg_image)
-bg_label = tk.Label(tela_login, image=bg_photo)
-bg_label.place(relwidth=1, relheight=1)
 
 # Adicionando os campos de entrada e rótulos
 label_usuario = tk.Label(tela_login, text="Usuário", bg="#00796B", fg="white")
